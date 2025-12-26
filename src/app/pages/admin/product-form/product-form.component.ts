@@ -601,8 +601,6 @@ import { environment } from '../../../../environments/environment';
         grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
       }
-        gap: 1rem;
-      }
     }
   `]
 })
