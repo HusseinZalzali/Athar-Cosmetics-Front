@@ -28,16 +28,14 @@ import { LanguageService } from '../../services/language.service';
 
           <div class="footer-section">
             <h4>{{ currentLang === 'ar' ? 'اتصل بنا' : 'Contact Us' }}</h4>
-            <p style="color: var(--text-light);">📞 +1 (555) 123-4567</p>
-            <p style="color: var(--text-light);">✉️ info&#64;atharcosmetics.com</p>
+            <p style="color: var(--text-light);">📞 81809643</p>
+            <p style="color: var(--text-light);">✉️ <a href="mailto:atharxosmetics.lb@gmail.com" style="color: var(--text-light); text-decoration: none;">atharxosmetics.lb&#64;gmail.com</a></p>
           </div>
 
           <div class="footer-section">
             <h4>{{ currentLang === 'ar' ? 'تابعنا' : 'Follow Us' }}</h4>
             <div class="social-links">
-              <a href="#" class="social-icon">📘</a>
-              <a href="#" class="social-icon">📷</a>
-              <a href="#" class="social-icon">🐦</a>
+              <a href="https://www.instagram.com/atharcosmetics.lb/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">📷</a>
             </div>
           </div>
         </div>
@@ -108,6 +106,51 @@ import { LanguageService } from '../../services/language.service';
       padding-top: 2rem;
       border-top: 1px solid rgba(199, 161, 90, 0.3);
       color: var(--text-light);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .footer {
+        padding: 2rem 0 1rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .footer-section {
+        h3, h4 {
+          font-size: 1.1rem;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer {
+        padding: 1.5rem 0 1rem;
+      }
+
+      .footer-content {
+        gap: 1.5rem;
+      }
+
+      .footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.9rem;
+      }
     }
   `]
 })

@@ -179,6 +179,47 @@ import { LanguageService } from '../../services/language.service';
         color: var(--text-secondary);
       }
     }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .account-page {
+        padding: 1.5rem 0;
+      }
+
+      .order-card {
+        padding: 1.5rem;
+      }
+
+      .order-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+
+      .order-footer {
+        .order-total {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      .order-card {
+        padding: 1rem;
+      }
+
+      .order-items {
+        .order-item {
+          font-size: 0.9rem;
+        }
+      }
+
+      .order-footer {
+        .order-total {
+          font-size: 1rem;
+        }
+      }
+    }
   `]
 })
 export class AccountComponent implements OnInit {

@@ -258,14 +258,58 @@ import { environment } from '../../../environments/environment';
     }
 
     @media (max-width: 480px) {
-      .cart-item {
-        padding: 1rem 0.5rem;
+      .cart-page {
+        padding: 1.5rem 0;
       }
 
-      .item-quantity .qty-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
+      .page-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cart-item {
+        padding: 1rem 0.5rem;
+        grid-template-columns: 80px 1fr;
+        gap: 1rem;
+      }
+
+      .item-image {
+        width: 80px;
+        height: 80px;
+      }
+
+      .item-details {
+        .item-name {
+          font-size: 1rem;
+        }
+
+        .item-price {
+          font-size: 1rem;
+        }
+      }
+
+      .item-quantity {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+
+        .qty-btn {
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+      }
+
+      .item-total {
+        grid-column: 1 / -1;
+        text-align: left;
+        margin-top: 0.5rem;
+      }
+
+      .remove-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
       }
     }
   `]

@@ -542,11 +542,65 @@ import { environment } from '../../../../environments/environment';
 
       .form-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .form-section {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+      }
+
+      .image-upload-area {
+        padding: 2rem 1rem;
       }
 
       .selected-images-grid,
       .existing-images-grid {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+      }
+
+      .form-actions {
+        flex-direction: column;
+        
+        .btn {
+          width: 100%;
+          min-width: auto;
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-form {
+        padding: 1rem;
+      }
+
+      .form-section {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.1rem;
+      }
+
+      .image-upload-area {
+        padding: 1.5rem 1rem;
+      }
+
+      .upload-icon {
+        font-size: 2rem;
+      }
+
+      .selected-images-grid,
+      .existing-images-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
         gap: 1rem;
       }
     }

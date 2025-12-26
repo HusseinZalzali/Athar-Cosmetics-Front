@@ -247,16 +247,46 @@ import { environment } from '../../../environments/environment';
     }
 
     @media (max-width: 480px) {
+      .shop-page {
+        padding: 1.5rem 0;
+      }
+
+      .page-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
       .filters-sidebar {
         padding: 1rem;
       }
 
+      .filter-section {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          font-size: 0.95rem;
+        }
+      }
+
       .products-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
 
       .product-card {
         max-width: 100%;
+      }
+
+      .product-image {
+        height: 250px;
+      }
+
+      .product-name {
+        font-size: 1.1rem;
+      }
+
+      .product-price {
+        font-size: 1.25rem;
       }
     }
   `]

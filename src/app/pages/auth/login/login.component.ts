@@ -63,6 +63,35 @@ import { AuthService } from '../../../services/auth.service';
         color: var(--text-secondary);
       }
     }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .auth-page {
+        padding: 2rem 0;
+        min-height: calc(100vh - 150px);
+      }
+
+      .auth-card {
+        padding: 1.5rem;
+        margin: 0 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .auth-page {
+        padding: 1.5rem 0;
+      }
+
+      .auth-card {
+        padding: 1.25rem;
+        margin: 0 0.5rem;
+
+        h1 {
+          font-size: 1.75rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
   `]
 })
 export class LoginComponent {

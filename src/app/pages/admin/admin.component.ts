@@ -433,6 +433,78 @@ import { environment } from '../../../environments/environment';
       padding: 3rem;
       color: var(--text-muted);
     }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .admin-page {
+        padding: 1.5rem 0;
+      }
+
+      .admin-tabs {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .admin-filters {
+        padding: 1rem;
+      }
+
+      .filter-row {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .filter-group {
+        min-width: 100%;
+      }
+
+      .product-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .product-actions {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .order-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+
+      .modal-content {
+        padding: 1.5rem;
+        width: 95%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .admin-tabs {
+        .tab-btn {
+          padding: 0.75rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      .product-item {
+        padding: 1rem;
+      }
+
+      .product-preview {
+        width: 60px;
+        height: 60px;
+      }
+
+      .order-item {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
   `]
 })
 export class AdminComponent implements OnInit {

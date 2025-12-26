@@ -261,18 +261,37 @@ import { CartService } from '../../services/cart.service';
     }
 
     @media (max-width: 480px) {
+      .header {
+        padding: 0.75rem 0;
+      }
+
       .header-content {
         flex-wrap: wrap;
+        gap: 1rem;
       }
 
       .logo {
         font-size: 1.25rem;
+        height: 45px;
+
+        .logo-image {
+          max-width: 140px;
+        }
+      }
+
+      .mobile-menu-toggle {
+        padding: 6px;
       }
 
       .header-actions {
         width: 100%;
         justify-content: space-between;
         margin-top: 0.5rem;
+        order: 3;
+      }
+
+      .nav {
+        top: 60px;
       }
     }
   `]
