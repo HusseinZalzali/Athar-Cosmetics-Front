@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProductService, Product } from '../../services/product.service';
 import { Category } from '../../services/product.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -436,9 +437,10 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
           return imageUrl;
         }
-        // Ensure URL starts with / if it doesn't
+        // Construct absolute URL using backend API base URL
         const cleanUrl = imageUrl.startsWith('/') ? imageUrl : `/${imageUrl}`;
-        return cleanUrl;
+        const baseUrl = environment.apiUrl.replace('/api', ''); // Remove /api to get base URL
+        return `${baseUrl}${cleanUrl}`;
       }
     }
     return 'https://via.placeholder.com/300x300?text=No+Image';

@@ -6,6 +6,7 @@ import { ProductService, Product, Category } from '../../services/product.servic
 import { OrderService, Order } from '../../services/order.service';
 import { NotificationService } from '../../services/notification.service';
 import { ConfirmModalComponent } from '../../components/confirm-modal/confirm-modal.component';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-admin',
@@ -519,8 +520,10 @@ export class AdminComponent implements OnInit {
       if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
         return imageUrl;
       }
-      // Ensure URL starts with / if it doesn't
-      return imageUrl.startsWith('/') ? imageUrl : `/${imageUrl}`;
+      // Construct absolute URL using backend API base URL
+      const cleanUrl = imageUrl.startsWith('/') ? imageUrl : `/${imageUrl}`;
+      const baseUrl = environment.apiUrl.replace('/api', ''); // Remove /api to get base URL
+      return `${baseUrl}${cleanUrl}`;
     }
     return null;
   }

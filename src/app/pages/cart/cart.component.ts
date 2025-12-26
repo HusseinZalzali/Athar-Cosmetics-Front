@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CartService, CartItem } from '../../services/cart.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-cart',
@@ -295,11 +296,13 @@ export class CartComponent implements OnInit {
   getProductImage(product: any): string {
     if (product.images && product.images.length > 0 && product.images[0].url) {
       const imageUrl = product.images[0].url;
-      if (imageUrl.startsWith('http')) {
+      if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
         return imageUrl;
       }
+      // Construct absolute URL using backend API base URL
       const cleanUrl = imageUrl.startsWith('/') ? imageUrl : `/${imageUrl}`;
-      return cleanUrl;
+      const baseUrl = environment.apiUrl.replace('/api', ''); // Remove /api to get base URL
+      return `${baseUrl}${cleanUrl}`;
     }
     return 'https://via.placeholder.com/300x300?text=No+Image';
   }

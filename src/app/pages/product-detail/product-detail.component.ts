@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ProductService, Product } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-product-detail',
@@ -416,8 +417,10 @@ export class ProductDetailComponent implements OnInit {
   getImageUrl(url: string): string {
     if (!url) return 'https://via.placeholder.com/500x500?text=No+Image';
     if (url.startsWith('http://') || url.startsWith('https://')) return url;
-    // Ensure URL starts with / if it doesn't
-    return url.startsWith('/') ? url : `/${url}`;
+    // Construct absolute URL using backend API base URL
+    const cleanUrl = url.startsWith('/') ? url : `/${url}`;
+    const baseUrl = environment.apiUrl.replace('/api', ''); // Remove /api to get base URL
+    return `${baseUrl}${cleanUrl}`;
   }
 }
 

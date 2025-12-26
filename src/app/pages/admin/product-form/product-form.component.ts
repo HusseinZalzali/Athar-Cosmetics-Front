@@ -5,6 +5,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ProductService, Product, Category } from '../../../services/product.service';
 import { NotificationService } from '../../../services/notification.service';
 import { ConfirmModalComponent } from '../../../components/confirm-modal/confirm-modal.component';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-product-form',
@@ -690,8 +691,10 @@ export class ProductFormComponent implements OnInit {
   getImageUrl(url: string): string {
     if (!url) return '';
     if (url.startsWith('http://') || url.startsWith('https://')) return url;
-    // Ensure URL starts with / if it doesn't
-    return url.startsWith('/') ? url : `/${url}`;
+    // Construct absolute URL using backend API base URL
+    const cleanUrl = url.startsWith('/') ? url : `/${url}`;
+    const baseUrl = environment.apiUrl.replace('/api', ''); // Remove /api to get base URL
+    return `${baseUrl}${cleanUrl}`;
   }
 
   saveProduct(): void {
