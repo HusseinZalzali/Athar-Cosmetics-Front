@@ -385,6 +385,73 @@ import { environment } from '../../../environments/environment';
         grid-template-columns: 1fr;
       }
     }
+
+    @media (max-width: 360px) {
+      .hero {
+        min-height: 50vh;
+        padding: 2rem 0.75rem;
+      }
+
+      .hero-logo {
+        max-width: 150px;
+      }
+
+      .hero-title {
+        font-size: 1.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .hero-cta {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      .featured-section,
+      .categories-section {
+        padding: 2.5rem 0;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .product-image {
+        height: 180px;
+      }
+    }
+
+    /* Landscape phone orientation */
+    @media (max-width: 896px) and (orientation: landscape) and (max-height: 500px) {
+      .hero {
+        min-height: 100vh;
+        padding: 1.5rem;
+      }
+
+      .hero-logo {
+        max-width: 150px;
+      }
+
+      .hero-title {
+        font-size: 1.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .product-image {
+        height: 150px;
+      }
+    }
   `]
 })
 export class HomeComponent implements OnInit, OnDestroy {

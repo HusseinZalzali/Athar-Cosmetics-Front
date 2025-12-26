@@ -29,7 +29,7 @@ import { LanguageService } from '../../services/language.service';
           <div class="footer-section">
             <h4>{{ currentLang === 'ar' ? 'اتصل بنا' : 'Contact Us' }}</h4>
             <p style="color: var(--text-light);">📞 81809643</p>
-            <p style="color: var(--text-light);">✉️ <a href="mailto:atharxosmetics.lb@gmail.com" style="color: var(--text-light); text-decoration: none;">atharxosmetics.lb&#64;gmail.com</a></p>
+            <p style="color: var(--text-light);">✉️ <a href="mailto:atharcosmetics.lb@gmail.com" style="color: var(--text-light); text-decoration: none;">atharxosmetics.lb&#64;gmail.com</a></p>
           </div>
 
           <div class="footer-section">

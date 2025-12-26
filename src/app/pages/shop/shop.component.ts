@@ -289,6 +289,74 @@ import { environment } from '../../../environments/environment';
         font-size: 1.25rem;
       }
     }
+
+    @media (max-width: 360px) {
+      .shop-page {
+        padding: 1rem 0;
+      }
+
+      .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .filters-sidebar {
+        padding: 0.875rem;
+      }
+
+      .filter-section {
+        margin-bottom: 1.25rem;
+
+        h3 {
+          font-size: 0.9rem;
+        }
+      }
+
+      .products-grid {
+        gap: 1.25rem;
+      }
+
+      .product-image {
+        height: 220px;
+      }
+
+      .product-name {
+        font-size: 1rem;
+      }
+
+      .product-price {
+        font-size: 1.15rem;
+      }
+
+      .btn-small {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Landscape phone orientation */
+    @media (max-width: 896px) and (orientation: landscape) and (max-height: 500px) {
+      .shop-content {
+        grid-template-columns: 200px 1fr;
+      }
+
+      .filters-sidebar {
+        padding: 1rem;
+        position: sticky;
+        top: 60px;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .product-image {
+        height: 180px;
+      }
+    }
   `]
 })
 export class ShopComponent implements OnInit, OnDestroy {

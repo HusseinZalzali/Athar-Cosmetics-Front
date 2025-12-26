@@ -312,6 +312,50 @@ import { environment } from '../../../environments/environment';
         right: 0.5rem;
       }
     }
+
+    @media (max-width: 360px) {
+      .cart-page {
+        padding: 1rem 0;
+      }
+
+      .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .cart-item {
+        padding: 0.875rem 0.5rem;
+        grid-template-columns: 70px 1fr;
+        gap: 0.75rem;
+      }
+
+      .item-image {
+        width: 70px;
+        height: 70px;
+      }
+
+      .item-details {
+        .item-name {
+          font-size: 0.95rem;
+        }
+
+        .item-price {
+          font-size: 0.95rem;
+        }
+      }
+
+      .item-quantity {
+        .qty-btn {
+          width: 32px;
+          height: 32px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .cart-summary {
+        padding: 1rem;
+      }
+    }
   `]
 })
 export class CartComponent implements OnInit {

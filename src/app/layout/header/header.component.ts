@@ -294,6 +294,63 @@ import { CartService } from '../../services/cart.service';
         top: 60px;
       }
     }
+
+    @media (max-width: 360px) {
+      .header {
+        padding: 0.625rem 0;
+      }
+
+      .logo {
+        height: 40px;
+        font-size: 1.1rem;
+
+        .logo-image {
+          max-width: 120px;
+        }
+      }
+
+      .mobile-menu-toggle {
+        padding: 5px;
+
+        span {
+          width: 22px;
+          height: 2.5px;
+        }
+      }
+
+      .cart-link {
+        font-size: 1.25rem;
+      }
+
+      .header-actions {
+        gap: 0.5rem;
+      }
+
+      .nav {
+        top: 55px;
+        padding: 1.5rem;
+      }
+    }
+
+    /* Landscape phone orientation */
+    @media (max-width: 896px) and (orientation: landscape) and (max-height: 500px) {
+      .header {
+        padding: 0.5rem 0;
+      }
+
+      .logo {
+        height: 40px;
+
+        .logo-image {
+          max-width: 120px;
+        }
+      }
+
+      .nav {
+        top: 50px;
+        padding: 1rem;
+      }
+    }
   `]
 })
 export class HeaderComponent implements OnInit {

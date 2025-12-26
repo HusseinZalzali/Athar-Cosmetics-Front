@@ -210,12 +210,54 @@ import { LanguageService } from '../../services/language.service';
     }
 
     @media (max-width: 480px) {
+      .checkout-page {
+        padding: 1.5rem 0;
+      }
+
+      .page-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
       .form-section {
         padding: 1rem;
       }
 
       .payment-option {
         padding: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .order-summary {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .checkout-page {
+        padding: 1rem 0;
+      }
+
+      .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .form-section {
+        padding: 0.875rem;
+      }
+
+      .payment-option {
+        padding: 0.625rem;
+        font-size: 0.85rem;
+      }
+
+      .order-summary {
+        padding: 0.875rem;
+      }
+
+      .summary-total {
+        font-size: 1.25rem;
       }
     }
   `]

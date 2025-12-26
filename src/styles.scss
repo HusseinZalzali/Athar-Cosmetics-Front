@@ -437,9 +437,97 @@ textarea {
 }
 
 /* Responsive Breakpoints */
-/* Mobile First Approach */
+/* Mobile First Approach - Comprehensive Phone Support */
 
-/* Extra Small Devices (phones, 576px and down) */
+/* Very Small Phones (320px and below) */
+@media (max-width: 320px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  textarea,
+  select {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+}
+
+/* Small Phones (360px - 374px) */
+@media (min-width: 321px) and (max-width: 374px) {
+  .container {
+    padding: 0 0.875rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 11px 18px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Standard Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Large Phones (414px - 575px) */
+@media (min-width: 414px) and (max-width: 575.98px) {
+  .container {
+    padding: 0 1.125rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Extra Small Devices (phones, 576px and down) - General */
 @media (max-width: 575.98px) {
   .container {
     padding: 0 1rem;
@@ -490,6 +578,30 @@ textarea {
   select {
     padding: 14px 16px; /* Larger touch target */
     font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Landscape Phone Orientation */
+@media (max-width: 896px) and (orientation: landscape) and (max-height: 500px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  /* Reduce vertical spacing in landscape */
+  .form-group {
+    margin-bottom: 1rem;
   }
 }
 
@@ -549,6 +661,48 @@ textarea {
 
   .card {
     cursor: default;
+  }
+
+  /* Better spacing for touch */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Larger tap targets */
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+}
+
+/* High DPI / Retina Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Very Small Height Screens (for phones in landscape or small devices) */
+@media (max-height: 600px) {
+  .container {
+    padding: 0.75rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card {
+    padding: 0.875rem;
   }
 }
 

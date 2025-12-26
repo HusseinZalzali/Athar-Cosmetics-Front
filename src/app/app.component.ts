@@ -34,6 +34,25 @@ import { NotificationComponent } from './components/notification/notification.co
         padding-top: 70px;
       }
     }
+
+    @media (max-width: 480px) {
+      main {
+        padding-top: 65px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      main {
+        padding-top: 60px;
+      }
+    }
+
+    /* Landscape orientation adjustments */
+    @media (max-width: 896px) and (orientation: landscape) and (max-height: 500px) {
+      main {
+        padding-top: 55px;
+      }
+    }
   `]
 })
 export class AppComponent {}
